@@ -1,0 +1,63 @@
+#include<stdio.h>
+int main()
+{
+	int a[5] = { 1,8,36,7,2 }; int large =a[0]; int i = 0;
+	for(i; i<5; i++)
+	{
+		if (large < a[i])
+		{
+			large = a[i];
+		}
+		
+	}
+	printf("%d", large);
+	return 0;
+}
+
+
+
+#include<stdio.h>
+int main()
+{
+	int a[] = { 1,8,36,7,2 }; int large = a[0]; int i = 0; int asize = 0;
+	asize = sizeof(a)/sizeof(int);
+	for(i; i<asize; i++)
+	{
+		if (large < a[i])
+		{
+			large = a[i];
+		}
+		
+	}
+	printf("%d", large);
+	return 0;
+}
+
+
+
+#include<stdio.h>
+int a[] = { 1,8,36,7,2 }; int large = a[0]; int i = 0; int asize = 0;
+
+int sizing(int large, int i) 
+{
+	for (i; i < asize; i++)
+	{
+		if (large < a[i])
+		{
+			large = a[i];
+		}
+
+	}
+	printf("%d", large);
+	return 0;
+}
+
+int main()
+{
+	
+	asize = sizeof(a) / sizeof(int);
+	sizing(large, i);
+}
+
+
+
