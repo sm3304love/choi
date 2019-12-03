@@ -1,0 +1,26 @@
+#include<stdio.h> 
+
+int main()
+{
+	 int d;
+	d = 0;
+
+	scanf_s("%d", &d);
+	int flag = 0;
+
+	for (int i = 2; i < d / 2 + 1; i++) {
+
+		if (d % i == 0) {
+			flag = 1;
+			break;
+		}
+	}
+
+	if (flag == 1) {
+		printf("not prime");
+	}else {
+		printf("prime");
+	}
+
+	return 0;
+}
