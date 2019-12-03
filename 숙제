@@ -1,38 +1,45 @@
 #include<stdio.h> 
+
 int main()
+
 {
-	int i = 0; 
-	int a[101]; 
-	int start = 0; 
-	int middle = 0; 
-	int end = 0; 
-	int b = 0; 
+	int i = 0;
+	int a[101];
+	int start = 0;
+	int middle = 0;
+	int end = 0;
+	int b = 0;
 	int c = 1;
-	middle = (start + end) % 2; 
-	scanf_s("%d", &b);
-	for (i = 0; i < 101; i++)
-	{
-		a[i] = i;
-	}
-	
-	start = a[0]; end = a[100];
-	
-	while (middle != b)
-	{
-		if (middle > b)
-		{
-			end = end % 2;
-			c++;
-		}
-		else  
-		{
-			start = end % 2;
-			c++;
-		}
 	
 
+	scanf_s("%d", &b);
+
+	for (i = 0; i < 101; i++){
+		a[i] = i;
 	}
+
+	start = a[0]; 
+	end = a[100];
+	middle = (start + end) / 2;
+
+	while (middle != b){
+
+		printf("%d \n", middle);
+
+		if (middle > b){
+			end = middle; ///명확히 알수 있게
+			middle = (start + end) / 2;
+			c++;
+		}else{
+			start = middle;
+			middle = (start + end) / 2;
+
+			c++;
+		}
+	}
+
 	printf("%d번 만에 찾음", c);
-			
+
 	return 0;
+
 }
