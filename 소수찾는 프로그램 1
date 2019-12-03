@@ -1,0 +1,32 @@
+#include<stdio.h> 
+
+int main()
+{
+	int a; int b; int c; int d;
+	d = 0;
+	
+	scanf_s("%d", &d);
+	while (1){
+	   
+		a = d % 2;
+	    b = d % 3;
+	    c = d % 5;
+		
+		if (d != 2 && a == 0) {
+			printf("소수가 아니다");
+			break;
+		}
+		else if (d != 3 && b == 0) {
+			printf("소수가 아니다");
+			break;
+		}
+		else if (d != 5 && c == 0) {
+			printf("소수가 아니다");
+			break;
+		}
+		else
+			printf("소수이다");
+			break;
+	}
+	return 0;
+}
