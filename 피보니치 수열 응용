@@ -1,0 +1,22 @@
+#include<stdio.h>
+int test(int n);
+
+int main() {
+	test(9);
+}
+
+int test(int n)
+{
+	if (n == 1)
+	{
+		printf("%d", n);
+		return 0;
+	}
+	else
+	{
+		int a = test(n - 1);
+		printf("%d", a);
+	}
+
+	return n;
+}
