@@ -1,0 +1,52 @@
+#include<stdio.h> 
+int i = 0;
+int a[101];
+int start = 0;
+int middle = 0;
+int end = 0;
+int b = 0;
+int c = 1;
+
+int find(int middle, int b, int start, int end) {
+
+	while (middle != b) {
+
+		printf("%d \n", middle);
+
+		if (middle > b) {
+			end = middle; 
+			middle = (start + end) / 2;
+			c++;
+		}
+		else {
+			start = middle;
+			middle = (start + end) / 2;
+			c++;
+		}
+	}
+	return c; /// c값을 반환
+}
+
+
+int main()
+{
+	
+	scanf_s("%d", &b);
+
+	for (i = 0; i < 101; i++) {
+		a[i] = i;
+	}
+
+	start = a[0];
+
+	end = a[100];
+
+	middle = (start + end) / 2;
+
+	c = find(middle, b, start, end); /// 함수에서 반환된 c값을 대입
+
+	printf("%d번 만에 찾음", c);
+
+	return 0;
+
+}
