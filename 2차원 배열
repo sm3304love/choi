@@ -1,0 +1,15 @@
+#include<stdio.h>
+int b, c;
+int a[2][4] = { 1,2,3,4,5,6,7,8 };
+
+int main() 
+{
+	for (int b = 0; b < 2; b++)
+	{
+		for (int c = 0; c < 4; c++)
+		{
+			printf("%d", a[b][c]);
+		}
+		printf("1 end \n");
+	}
+}
