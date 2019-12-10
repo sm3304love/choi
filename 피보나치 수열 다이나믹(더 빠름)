@@ -1,0 +1,17 @@
+#include<stdio.h>
+int a[10] = {0,1};
+int i = 0;
+int alpa = 0;
+
+int main() 
+{
+	a[0] = 0;
+	a[1] = 1;
+	for(i =0; i<10; i++)
+	{
+		a[i+2]=a[i] + a[i+1];
+		alpa = a[i];
+		printf("%d", alpa);
+	}
+	return 0;
+}
