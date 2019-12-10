@@ -1,0 +1,31 @@
+int c = 0;
+int a[5] = {1,6,8,4,9 };
+int fort(int a[]);
+
+int main() 
+{
+	fort(a);
+	return 0;
+}
+
+int fort(int a[]) 
+{
+	for (int b = 0; b < 6; b++)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			if (a[i] > a[i + 1])
+			{
+				c = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = c;
+			}
+		}// inner for loop end
+		printf("start print");
+		for (int i = 0; i < 5; i++) {
+			printf("%d", a[i]);
+		}// print loop end
+		printf("\n");
+	}
+
+}
