@@ -1,0 +1,44 @@
+#include<stdio.h>
+int* inqueue(int*, int*, int [], int);
+int* dequeue(int*, int [], int);
+int front , back = -1;
+int i = 0;
+int arr[10];
+/*char str[2];*/
+int main()
+{
+	/*sacnf("%d", &a);*/
+    dequeue(&front,  arr, 3);
+	inqueue(&front, &back, arr, 5);
+
+	///dequeue(b, arr);
+	for (int c = 0; c < 10; c++) {
+		printf("%d ", arr[c]);
+	}
+	printf("\n");
+}
+
+int* inqueue(int* front,int* back, int arr[], int a)
+{
+	if (*front == -1) {
+		*front += 1;
+		*back += 1;
+	}
+	else {
+		*back += 1;
+	}
+
+	arr[*back] = a;
+
+}
+
+int* dequeue(int* front , int arr[], int a)
+{
+	if (*front != -1)
+	{
+		*front -= 1;
+		arr[*front] = a;
+	}
+	
+	return arr;
+}
