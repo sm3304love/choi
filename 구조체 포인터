@@ -1,0 +1,19 @@
+#include <stdio.h> 
+
+
+struct ch
+{
+	int xpos;
+	int ypos;
+}; ch1;
+
+int main()
+{
+	struct ch ch1 = { 10,20 };
+	struct ch* pptr = &ch1;
+	(*pptr).xpos = 20;
+	(*pptr).ypos = 30;
+	printf(" x = %d, y = %d", ch1.xpos, ch1.ypos);
+	
+	return 0;
+}
