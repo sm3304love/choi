@@ -1,0 +1,46 @@
+#include<stdio.h>
+
+int main()
+{
+	int height = 3, width = 3;
+	int** arr; // 포인터의 포인터
+	arr = (int**)malloc(sizeof(int*) * height);
+	for (int i = 0; i < height; i++)
+	{
+		arr[i] = (int*)calloc(sizeof(int) * width);
+		
+	}
+
+	arr[0][0] = 1; arr[1][1] = 1;
+	arr[1][0] = 1; arr[1][2] = 1;
+	arr[2][0] = 1; arr[1][2] = 1; arr[2][2] = 1;
+
+
+	int position[4][2] = ((0, 1), (1, 0), (-1, 0), (0, -1));
+	
+
+
+	int x = 0, y = 0;
+
+	while(queue empty or arrive){
+
+		for (int i = 0; i < 4; i++) {
+
+			c_x = x + position[i][0];
+			c_y = y + position[i][1];
+
+			if (c_x < 3 and c_x >= 0)
+				if (arr[c_x][c_y] == 1)
+				
+				{ }
+
+		}
+
+	}
+
+
+	
+
+
+	free(arr);
+}
