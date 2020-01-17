@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+char p[50];
+int i = 0;
+
+int main(void)
+{
+	gets_s(p, 50);
+	while (p[i] != '\0')
+	{
+		if (p[i] >= 'a' && p[i] <= 'z')
+		{
+			p[i] += 3;
+		}
+		i++;
+		
+	}
+	printf("암호화 = %s", p);
+}
+
+//
+#include<stdio.h>
+
+char p[50];
+int i = 0;
+
+int main(void)
+{
+	gets_s(p, 50);
+	while (p[i] != '\0')
+	{
+		if (p[i] >= 'a' && p[i] <= 'z')
+		{
+			p[i] += 3;
+		}
+		i++;
+		
+	}
+	printf("암호화 = %s", p);
+}
