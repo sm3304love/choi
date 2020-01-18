@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+typedef struct 
+{
+	int number;
+	char name[20];
+	double grade;
+}student;
+
+student list[3] =
+{
+	{2017010900, "홍길동", 4.2},
+	{2017020900, "김철수", 3.2},
+	{2017030900, "김영희", 3.9}
+};
+
+
+int main() {
+	
+	int idx = 0;
+	for (int i = 0; i <3; i++)
+	{
+		if (list[i].grade>list[idx].grade)
+		{
+			idx = i;
+		}		
+	}
+		printf("%d,%s,%lf", list[idx].number, list[idx].name, list[idx].grade);
+	return 0;
+}
+
+
