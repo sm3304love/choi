@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+
+double f(double k)
+{
+	return 1 / k;
+}
+
+double funciton(double(*pf)(double), int n)
+{
+	double q = 0.0;
+	double sig;
+	for (int i = 1; i <= n; i++)
+	{
+		sig = f(i);
+		q += sig * sig +sig + 1;
+
+	}
+	return q;
+}
+
+int main()
+{
+	int n = 0;
+	scanf_s("%d", &n);
+
+	printf("%lf",funciton(f,n));
+
+}
+
+
+
