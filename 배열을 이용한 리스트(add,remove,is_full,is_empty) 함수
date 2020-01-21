@@ -31,9 +31,10 @@ void add(ArrayListType* L, int position, element item)
 		for (i = (L->length - 1); i >= position; i--)
 		{
 			L->list[i + 1] = L->list[i];
+		}
 			L->list[position] = item;
 			L->length++;
-		}
+		
 	}
 }
 /*-----------------------------------삭제연산 함수*/
